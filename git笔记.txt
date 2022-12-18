@@ -1,0 +1,19 @@
+git clone
+git status
+git add
+git commit -m "" -m "" / git commit -am (add + commits)
+git diff
+git push -u origin master  // -u: upstreaming,使用一次之后可直接使用git push
+git pull -u origin master
+
+# 1.创建ssh
+
+# 2.提PR
+  - 创建new branch: git checkout -b 新分支名字，无需引号(可以使用git branch 查看现有的branch，使用git check name 进行branch之间的切换)
+  - 然后在new branch下修改代码，更新状态(git add/git commit), 此时只在本地进行了代码的变化，github没有变化
+  - 将new branch pull到github上: git push -u 新分支名字, 然后在GitHub上进行branch之间的merge
+  - 在Github上merge两个branch之后，可以在本地中删除创建的new branch:git branch -d 新分支名字
+
+# 3.git undo
+  - git reset(针对新建文本git add) / git reset HEAD~1(针对git commit)
+  - git log: 查看日志，配合git reset hashnumber可以回溯到某一个存储节点
